@@ -2,4 +2,16 @@
 
 ## Brainstorming
 * Platformer
-  * Idk lol
+  * Mechanics
+    * Basics
+      * Jumping
+      * Running
+      * Sprinting (?)
+      * Wall Jumping
+  * Enemies
+  * Themes/Setting
+
+## Todo
+* Basic Physics Engine
+  * Gravity
+  * Collision Detection
