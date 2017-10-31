@@ -1,6 +1,5 @@
-# mhsclubproject
 # <h1> MHS Coding Club JS game </h1>
-# Brainstorming Bullet Points
 
+## Brainstorming
 * Platformer
   * Idk lol
