@@ -4,6 +4,7 @@ var keyspressed = {
     'y':0
 };
 var blocks = [];
+var circles = [];
 
 function setup(){
     createCanvas(window.innerWidth,window.innerHeight);
@@ -15,13 +16,22 @@ function draw(){
     player.show();
     rect(player.x,player.y,5,5);
     blocks.forEach(function(block){
-        if(player.x==(block.x+5)||player.x==(block.x-5)){
-            console.log('ayylmao');
-            player.move(-5,0);
+        if(player.collide(block)){
+            console.log('rect & circle');
         }
-        console.log(player.x-block.x);
+        /*blocks.forEach(function (newBlock) {
+            if (block.collide(newBlock)) {
+                console.log('rect & rect');
+            }
+        });*/
         block.show();
-    })
+    });
+    circles.forEach(function (circleChecked) {
+        if (player.collide(circleChecked)) {
+            console.log('circle & circle');
+        }
+        circleChecked.show();
+    });
     player.move(keyspressed['x'],keyspressed['y']);
 }
 
@@ -41,4 +51,8 @@ function keyReleased(){
 
 function mouseClicked(){
     blocks.push(new Block(mouseX,mouseY,20,20));
+}
+
+function mouseWheel() {
+    circles.push(new Player(mouseX, mouseY, 0));
 }
